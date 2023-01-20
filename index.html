@@ -5,34 +5,59 @@
     <meta charset="UTF-8">
     <!--Titulo que aparece en la tab-->
     <title>Brandon's Personal Site 🌑 | Main</title>
+    <!--Al dar los atributos desde aqui, se le denomminan Internal CSS y generaliza los atributos brindados a toda esta pagina en general, pero a no a las paginas a las que se llega con hipervinculos-->
+    <!--Se escribiria asi
+    <style>
+        body {
+            background-color: #EAF6F6;
+        }
+        hr{
+            background-color: #EAF6F6;
+            border-style: none;
+            height: 0;
+            width: 5%;
+            border-style: none;
+            border-top-style: dotted;
+            border-color: lightgray;
+            border-width: 5px;
+        }
+    </style>
+    -->
+
+    <!--Para escribir atributos CSS externos se denota por medio de referencia a otro archivo general como aqui-->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
+<!--Dentro de los parámetros de body es posible comenzar a implicar CSS, por eso se comienzan a utiliar ;-->
+<!--A esa practica se le conoce como Inline CSS y se notaria de la siguiente forma, al modificar los parametros de esta forma, podemos darles atributos individuales-->
+<!--<body style="background-color: #EAF6F6;">-->
 <body>
     <table cellspacing=15>
         <tbody>
             <tr>
                 <td>
                     <!--Importar imagen desde link en Internet-->
-                    <a href="https://linkedin.com/in/brandon-najera-jimenez"><img src="https://media.licdn.com/dms/image/C4E03AQE0WA-3K3d4zQ/profile-displayphoto-shrink_800_800/0/1630351914933?e=2147483647&v=beta&t=yelxbxo9oXhP7XaSGYIf70wWTcWi0xzLiIHZG49dHAE"
+                    <!--Puedes tener varias clases por elemento pero solo una ID para dar formato-->
+                    <a href="https://linkedin.com/in/brandon-najera-jimenez"><img class="image1 circular" src="https://media.licdn.com/dms/image/C4E03AQE0WA-3K3d4zQ/profile-displayphoto-shrink_800_800/0/1630351914933?e=2147483647&v=beta&t=yelxbxo9oXhP7XaSGYIf70wWTcWi0xzLiIHZG49dHAE"
                     alt="Brandon Profile Picture" height=250></a>
                 </td>
                 <td>
-                    <!--Importar imagen que se encuentra guardad localmente-->
-                    <img src="Images/GV.jpg" alt="Gliz Vosley Logo" height=250>
-                </td>
-                <td>
-                    <h1>Brandon Nájera Jiménez</h1>
-                    <p><em>and COO of <strong>
+                    <h1 id="heading">Brandon Nájera Jiménez</h1>
+                    <p><em>Entrepreneur, Programmer and COO of <strong>
                             <!--Asi se crea un hipervinculo-->
                             <a href="https://www.glizvosley.com">Gliz Vosley</a>
                         </strong>.</em> </p>
                     <p>I am a telecommmunications and electronic systems engineer,
-                        I specialize on web and app developing, and ecommerce.</p>
+                        I specialize on web and app developing, data analytics and ecommerce.</p>
+                </td>
+                <td>
+                    <!--Importar imagen que se encuentra guardad localmente-->
+                    <img class="circular" src="Images/GV.jpg" alt="Gliz Vosley Logo" height=250>
                 </td>
             </tr>
         </tbody>
     </table>
-    <hr size="3" noshade>
+    <hr noshade>
     <h3>Personal Projects</h3>
     <!--Listas en bullets-->
     <ul>
@@ -94,7 +119,7 @@
             </tr>
         </tbody>
     </table>
-    <hr size="3" noshade>
+    <hr noshade>
     <a href="hobbies.html">My Hobbies</a>
     <a href="contact_me.html">Contact Me</a>
 </body>
